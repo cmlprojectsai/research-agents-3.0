@@ -1,6 +1,12 @@
 import os
 import requests
+import langchain
+import autogen
+import openai
+
+from autogen import config_list_from_json
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_openai import ChatOpenAI
 from langchain import PromptTemplate
 from langchain.chains.summarize import load_summarize_chain
 from bs4 import BeautifulSoup
@@ -14,9 +20,9 @@ import autogen
 
 
 load_dotenv()
-brwoserless_api_key = os.getenv("BROWSERLESS_API_KEY")
-serper_api_key = os.getenv("SERP_API_KEY")
-airtable_api_key = os.getenv("AIRTABLE_API_KEY")
+brwoserless_api_key = os.getenv("7f910cb0-be5b-400b-b5e8-bfbb81924af8")
+serper_api_key = os.getenv("727249e5b5f369010eb5978c7cef67fb390721bc")
+airtable_api_key = os.getenv("patdMO01NehP14r4D.2a6423f792dad0aed7c1858aa97ea4aef9bf91c60aca14b063cc3094ea42d812")
 config_list = config_list_from_json("OAI_CONFIG_LIST")
 
 
